@@ -5,7 +5,7 @@ def max_integer(my_list=[]):
     if len_list == 0:
         return (None)
     max_num = -30000000
-    for i in range(1, length):
+    for i in range(1, len_list):
         if max_num < my_list[i]:
             max_num = my_list[i]
 
