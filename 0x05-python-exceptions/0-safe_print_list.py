@@ -8,5 +8,6 @@ def safe_print_list(my_list=[], x=0):
                 print("{}".format(i), end="")
                 pos = pos + 1
         print("")
+        return pos
     except SyntaxError:
         print("Syntax Error Occured")
