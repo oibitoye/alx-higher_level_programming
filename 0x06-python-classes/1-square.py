@@ -11,7 +11,6 @@ class Square:
     """
     def __init__(self, size=0):
         self.__size = size
-        
         if self.__size <= 0:
             raise ValueError("size must be greater than 0")
         if type(self.__size) is not int:
