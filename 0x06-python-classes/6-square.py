@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Task 4-scuare.py
+Task 6-scuare.py
 This is a Class Square with private instance attrib
 """
 
@@ -11,6 +11,11 @@ class Square:
     and Public instance method: area(self)
     """
     def __init__(self, size=0, position=(0, 0)):
+        """Initialize a new square.
+        Args:
+            size (int): Size of square.
+            position (int, int): position of square.
+        """
         self.__size = size
         self.position = position
         if type(self.__size) is not int:
@@ -36,9 +41,10 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if (len(value) != 2 or not isinstance(value, tuple) or
-                not all(isinstance(i, int) for i in value) or
-                not all(i >= 0 for i in value)):
+        self.__position = value
+        if (len(self.__position) != 2 or not isinstance(self.__position, tuple) or
+                not all(isinstance(i, int) for i in self.__position) or
+                not all(i >= 0 for i in self.__position)):
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
