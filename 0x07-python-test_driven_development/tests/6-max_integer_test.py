@@ -12,3 +12,6 @@ class TestMaxInteger(unittest.TestCase):
         # Test negative numbers
         self.assertEqual(max_integer([-1, -4, -6, -5]), -1)
         self.assertEqual(max_integer([0]), 0)
+        self.assertEqual(max_integer([-1, -4, -6, -5, 0]), 0)
+        self.assertEqual(max_integer([-1, -4, 2, -5, 0, -7]), 0)
+        self.assertEqual(max_integer([1]), 1)
