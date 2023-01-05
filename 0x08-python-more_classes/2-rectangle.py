@@ -31,7 +31,7 @@ class Rectangle:
     def width(self, value):
         """ defines the width
         Args:
-            value: width
+            value: width of rect
         Raises:
             TypeError if width is not an integer
             ValueError if width is less than zero
@@ -87,4 +87,4 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
 
-        return (self.width * self.width) + (self.height * self.height)
+        return (self.width + self.width) + (self.height + self.height)

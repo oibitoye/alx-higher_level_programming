@@ -92,7 +92,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
 
-        return (self.width * self.width) + (self.height * self.height)
+        return (self.width + self.width) + (self.height + self.height)
 
     def __str__(self):
         """ function returns the Rectangle str
