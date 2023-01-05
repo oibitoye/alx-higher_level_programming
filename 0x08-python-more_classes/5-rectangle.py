@@ -5,7 +5,7 @@ Class that defines a Rectangle based on 0-rectangles
 
 
 class Rectangle:
-    """ 
+    """
     Class defines rectangle
     """
 
