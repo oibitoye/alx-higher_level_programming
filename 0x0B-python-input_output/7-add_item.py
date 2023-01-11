@@ -11,7 +11,7 @@ save_to_json = __import__("5-save_to_json_file").save_to_json_file
 load_from_json = __import__("6-load_from_json_file").load_from_json_file
 
 FILE = 'add_item.json'
-list = []
+new_list = []
 
 if os.path.exists(FILE) and os.path.getsize(FILE) > 0:
     my_list = load_from_json(FILE)
