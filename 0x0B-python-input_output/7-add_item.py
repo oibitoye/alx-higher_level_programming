@@ -20,4 +20,4 @@ if len(sys.argv) > 1:
     for elem in sys.argv[1:]:
         new_list.append(elem)
 
-save_to_json(list, FILE)
+save_to_json(new_list, FILE)
