@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 filename: 3-to_json_string.py
 function that returns the JSON
 representation of an object (string):
