@@ -14,10 +14,10 @@ FILE = 'add_item.json'
 new_list = []
 
 if os.path.exists(FILE) and os.path.getsize(FILE) > 0:
-    my_list = load_from_json(FILE)
+    new_list = load_from_json(FILE)
 
 if len(sys.argv) > 1:
     for elem in sys.argv[1:]:
-        list.append(elem)
+        new_list.append(elem)
 
 save_to_json(list, FILE)
