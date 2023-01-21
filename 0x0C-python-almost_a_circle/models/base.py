@@ -13,8 +13,8 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            __nb_objects += 1
-            id = __nb_objects
+            Base().__nb_objects += 1
+            id = Base().__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -104,10 +104,10 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """ Method that loads a CSV file """
+        """ This method loads a CSV file """
         filename = "{}.csv".format(cls.__name__)
 
-        if os.path.exists(filename) is False:
+        if os.path.exists(filename) is not True:
             return []
 
         with open(filename, 'r') as readFile:
@@ -121,9 +121,9 @@ class Base:
 
         matrix = []
 
-        for csv_elem in csv_list:
+        for elem in csv_list:
             dict_csv = {}
-            for kv in enumerate(csv_elem):
+            for kv in enumerate(elem):
                 dict_csv[list_keys[kv[0]]] = int(kv[1])
             matrix.append(dict_csv)
 
