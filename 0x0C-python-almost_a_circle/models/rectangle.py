@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for Rectangle class"""
+"""This is the Module for Rectangle class"""
 
 from models.base import Base
 
@@ -10,14 +10,10 @@ class Rectangle(Base):
     ...
     Required Attributes:
     ----------
-    width : int
-        the width of the rectangle
-    height : int
-        height of the rectangle
-    x : int
-        x coordinate
-    y : int
-        y coordinate
+    width (type:int): The width of the rectangle
+    height (type: int): The height of the rectangle
+    x (type: int): The x coordinate
+    y (type: int): The y coordinate
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -26,8 +22,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        self.id = id
-        super().__init__(self.id)
+        super().__init__(id)
 
     @property
     def width(self):
@@ -107,7 +102,8 @@ class Rectangle(Base):
         str_width = self.width
         str_height = self.height
 
-        return f"{str_rect} ({str_id}) {str_x}/{str_y} - {str_width}/{str_height}"
+        return f"{str_rect} ({str_id}) \
+            {str_x}/{str_y} - {str_width}/{str_height}"
 
     def update(self, *args, **kwargs):
         """ update method """
