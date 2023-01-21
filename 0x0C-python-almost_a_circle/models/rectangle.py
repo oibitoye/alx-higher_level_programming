@@ -102,8 +102,10 @@ class Rectangle(Base):
         str_width = self.width
         str_height = self.height
 
-        return f"{str_rect} ({str_id}) \
-            {str_x}/{str_y} - {str_width}/{str_height}"
+        return (
+            f"{str_rect} ({str_id}) "
+            f"{str_x}/{str_y} - {str_width}/{str_height}"
+        )
 
     def update(self, *args, **kwargs):
         """ update method """
